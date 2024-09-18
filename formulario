@@ -1,0 +1,38 @@
+#formulario de pesquisoa sobre inteligencia artificial
+pergunta1 = "Qual é sua faixa etaria?"
+pergunta2 = "Qual curso fez na Etec?"
+pergunta3 = "Qual a sua profissao, se houver?"
+pergunta4 = "Qual o seu grau de instrução?"
+pergunta5 = "Com que frequência você utiliza ferramentas de inteligência artificial(IA) para auxiliar em suas atividades acadêmicas"
+pergunta6 = "Quais ferramentas ou plataformas de IA voce utiliza com mais frequencia em seus estudos?"
+pergunta7 = "Para quais finalidades voce mais utiliza ferramentas de IA em seus estudos?"
+pergunta8 = "Qual é seu nivel ee confianca nos resultados fornecidos por ferramentas de IA de zero a dez, sendo dez; confianca total e zero; nenhuma confianca?"
+pergunta9 = "Voce costuma verificar os resultados ou informacoes fornecidas por ferramnetas de IA em outras fontes?"
+pergunta10 = "Voce ja encontrou erros ou informacoes imprecisas ao usar ferramentas de IA? Se sim, com que frequencia?"
+pergunta11 = "Como voce avalia  importancia das ferramentas de IA no seu processo de aprendizado?"
+pergunta12 = "Quais sao suas principais preocupacoes em relacao ao uso de ferramentas de IA em seus estudos?"
+pergunta13 = "Voce se sente preparado para explicar e justificar as informacoes geradas por ferramentas de IA se necessario?"
+perguntas = [pergunta1 , pergunta2 , pergunta3 , pergunta4 , pergunta5 , pergunta6 , pergunta7 , pergunta8 , pergunta9 , pergunta10, pergunta11 , pergunta12 , pergunta13]
+
+alternativa1 = ["1- 16-20" , "2- 21-25" , "3- 26-30" , "4- 31-35" , "5- 36-40"]
+alternativa4 = ["1- Ensino medio incompleto" , "2- Ensino medio completo" , "3- Ensino superior incompleto" , "4- Ensino superior completo" , "5- Pos graduado lato sensu" , "6- Pos graduado stricto sensu(Mestrado, Doutorado)"]
+alternativa5 = ["1- Nunca" , "2- Raramente" , "3- As vezes" , "4- Frequentemente" , "5- Sempre"]
+alternativa6 = ["1- Assistentes de escrita(e.g.,ChatGPT)" , "2- Ferramentas de tradução(e.g., Google Translate)" , "3- Plataforma de busca e recomendação(e.g., Google Scholar)" , "4- IA geradora de imagens(MidJourney)" , "5- IA geradora de apresentações(Gamma)" , "6- Outras(especifique)"]
+alternativa7 = ["1- Pesquisa e coleta de informações" , "2- Redação e revisão de textos" , "3- Análise de dados e estatisticas" , "4- Tradução de materiais" , "5- Outras(especifique)"]
+alternativa9 = ["1- Sempre" , "2- Frequentemente" , "3- As vezes" , "4- Raramente" , "5- Nunca"]
+alternativa10 = ["1- Sim, frequentemente" , "2- Sim, ocasionalmente" , "3- Sim, raramente" , "4- Não, nunca"]
+alternativa11 = ["1- Não são importantes" , "2- Pouco importante" , "3- Neutro" , "4- Importantes" , "5- Muito importantes"]
+alternativa12 = ["1- Precisão e confiabilidade das informações" , "2- Dependência excessiva da tecnologia" , "3- Questos de privacidade e seguranca" , "4- Falta de habilidades para avaliar criticamente o centeudo" , "5- oOutros(especifique)"]
+alternativa13 = ["1- Sim, sempre" , "2- Sim, na maioria das vezes" , "3- As vezes" , "4- Raramente" , "5- Não, nunca"]
+alternativas = [alternativa1 , "0" , "0" , alternativa4 , alternativa5 , alternativa6 , alternativa7 , "0" , alternativa9 , alternativa10 , alternativa11 , alternativa12 , alternativa13]
+pessoas = []
+for i in range(len(perguntas)):
+  pessoas.append(i)
+
+for i in range(len(perguntas)):
+  print(perguntas[i])
+  for x in range(len(alternativas[i])):
+    if alternativas[i][x] != "0":
+      print(alternativas[i][x])
+  pessoas[i] = input("Digite sua resposta: ")
+print(pessoas)
