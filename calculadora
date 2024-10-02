@@ -1,0 +1,57 @@
+#exercicio de funcao no python fazendo uma calculadora com tratativas de erros
+
+def soma(a , b):
+  resultado = a + b
+  return resultado
+
+def subtracao(a , b):
+  resultado = a - b
+  return resultado
+
+def divisao(a , b):
+  try:
+    resultado = a / b
+  except ZeroDivisionError:
+    print("Não é possivel dividir por zero!")
+  else:
+    return resultado
+
+def multiplicacao(a , b):
+  resultado = a * b
+  return resultado
+
+operador = ["Multiplicação" , "Divisão" , "Soma" , "Subtração"]
+
+for i in range(len(operador)):
+  print(f"{i + 1}- {operador[i]}")
+
+while True:
+  try:
+    operacao = int(input("Digite qual operação você deseja execultar: "))
+    if operacao >= 5 or operacao <= 0:
+      operacao = int(input("Digite um número válido: "))
+    if operacao >= 1 and operacao <= 4:
+      break
+  except ValueError:
+    print("Digite um número válido: ")
+
+n1 = int(input("Digite o 1º numero: "))
+n2 = int(input("Digite o 2º numero: "))
+
+def conta(a , b , c):
+
+  try:
+    if a == 1:
+      resultado = multiplicacao(b , c)
+    if a == 2:
+      resultado = divisao(b , c)
+    if a == 3:
+      resultado = soma(b , c)
+    if a == 4:
+      resultado = subtracao(b , c)
+  except ValueError:
+    print("Valor digitado Incorreto!")
+  else:
+    return resultado
+
+print(f"O resultado da {operador[operacao - 1]} é {conta(operacao , n1 , n2)}!")
