@@ -1,0 +1,16 @@
+#Exercicio de embaralhar a palavra
+
+import random
+
+palavra = input("Digite a palavra: ")
+
+def embaralhar(txt):
+  texto = ""
+  lista = txt.lower()
+  lista = list(lista)
+  random.shuffle(lista)
+  for i in range(len(lista)):
+     texto += lista[i]
+  return texto
+
+print(embaralhar(palavra))
