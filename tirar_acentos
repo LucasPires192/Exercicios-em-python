@@ -1,0 +1,21 @@
+#codigo pra tirar acentos dos texto
+
+acentos = {"a": ("á" , "à" , "â" , "ã") , "e" : ("é" , "è" , "ê") , "i": ("í" , "ì" ) , "o": ("ó" , "ò" , "ô" , "õ") , "u": ("ú" , "ù")}
+
+texto = input("Digite o texto: ")
+texto_div = list(texto)
+texto_corri = ""
+
+for i in acentos:
+  for k in range(len(texto_div)):
+    try:
+      if texto_div[k] in acentos[i]:
+        texto_div[k] = i
+    except KeyError:
+      continue
+
+for i in range(len(texto_div)):
+  texto_corri = texto_corri + texto_div[i]
+
+#print(" ".join(texto_div))
+print(texto_corri)
