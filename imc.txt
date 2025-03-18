@@ -1,0 +1,15 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	funcao inicio ()
+	{
+		real peso
+		real altura
+		escreva("Digite deu peso: \n")
+		leia(peso)
+		escreva("Digite sua altura: \n")
+		leia(altura)
+		real imc = peso / (altura * altura)
+		escreva("Seu imc é: " , mat.arredondar(imc, 2))
+	}
+}
